@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shows</title>
+</head>
+<body>
+    {% for i in object_list %}
+        <li>
+            <h2><a href="/films/"></a>{{ i.title }}</h2>
+            <img src="{{ i.image }}" alt="">
+            <div>
+                <label for="description-{{ i.pk }}">Описание:</label>
+                <p id="description-{{ i.pk }}">{{ i.description }}</p>
+            </div>
+            <span><strong>Оценка:</strong>{{ i.review }}</span>
+        </li>
+    {% endfor %}
+</body>
+</html>
