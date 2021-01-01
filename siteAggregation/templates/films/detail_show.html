@@ -28,7 +28,7 @@
             <h2>TVActors: </h2>
             <ul>
                 {% for i in object.cast.all %}
-                    <li>
+                    <li class="show">
                         <h3>{{ i.name }}</h3>
                         <img src="{{ i.image.url }}" height="200px" width="auto" alt="">
                         <p>{{ i.age }}</p>
@@ -40,10 +40,10 @@
     </div>
 
     <div>
-        <form action="/films/{{ object.id }}/" method="POST">
+        <form action="/show/{{ object.id }}/" method="POST">
             {% crsf.token %}
             {{ form.as_p }}
-            <input type="button" value="Add comment">
+            <input type="submit" value="Add comment">
         </form>
     </div>
 

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ tvactor.name }}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <header>
+        {% include 'cast/header_cast.html' %}
+    </header>
+    <div>
+        <h2>{{ object.name }}</h2>
+        <p>{{ object.age }}</p>
+        <p>{{ object.gender }}</p>
+        <img class="tvactor-image" src="{{ object.image.url }}" alt="">
+    </div>
+</body>
+</html>
